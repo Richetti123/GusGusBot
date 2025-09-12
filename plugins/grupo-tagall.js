@@ -1,11 +1,11 @@
 let handler = async (m, { conn, text, participants, args, command }) => {
   if (command == 'tagall' || command == 'invocar' || command == 'todos' || command == 'invocación' || command == 'invocacion') {
     let mensaje = args.join` `;
-    let encabezado = `@richetti_123 ${mensaje}`;
+    let encabezado = `@agustinitaa_32 ${mensaje}`;
     let texto = `${global.packname} te invoca despiértate 😡!!\n\n${encabezado}\n\n`;
 
     for (let mem of participants) {
-      texto += `😼 @${mem.id.split('@')[0]}\n`;
+      texto += `😈 @${mem.id.split('@')[0]}\n`;
     }
     texto += `${global.packname}`;
     conn.sendMessage(m.chat, { text: texto, mentions: participants.map(a => a.id) });
